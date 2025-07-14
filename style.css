@@ -1,0 +1,131 @@
+
+*{
+    box-sizing: border-box;
+    
+}
+html, body{
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    font-family: "Orbitron", sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+.button 
+{
+    padding: 12px;
+    margin: 0 6px;
+    border: 0;
+    background: linear-gradient(145deg, #80e9d6, #9face6);
+     color: #fff;
+    border-radius: 9px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    width: 66px;
+    height: 58px;
+    font-size: large;
+    font-weight:bold;
+}
+.row
+{
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.zero
+{
+    width: 144px;
+}
+.button.X
+{
+    background-color: red;
+    color: red;
+
+}
+
+.input
+{
+    font-size: 20px;
+    margin-bottom: 4px;
+    padding: 6px 6px;
+    border: 2px solid rgb(194, 193, 193);
+    border-radius: 5px;
+    width: 296px;
+    height: 45px;
+    background-color: #ebe8e8;
+    transition: background-color 0.3s ease; 
+}
+.input.active-input
+{
+    background-color: #e2dede;
+}
+.glow-text
+{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 40px;
+  color: #0e0f0f;
+  text-shadow: 0 0 8px #71e8d2, 0 0 20px #9face6, 0 0 40px #9face6;
+  margin-bottom: 16px;
+}
+
+h1{
+    text-align: center;
+}
+.wrapper {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 20px;
+      width: 400px;
+      margin-top: 0px;
+      box-shadow: 
+       inset 0 0 16px #2b2d2c,       
+       0 0 8px rgba(29, 30, 30, 0.4);
+       transition: 0.3s ease;
+    }
+.main-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.history-panel {
+  width: 250px;
+  padding: 20px;
+  border: 0;
+  border-radius: 16px;
+  background-color: #fafafa;
+  box-shadow: 
+       inset 0 0 16px #2b2d2c,       
+       0 0 8px rgba(29, 30, 30, 0.4);
+       transition: 0.3s ease;
+  color: #0c0c0c;
+  font-family: 'Manrope', sans-serif;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.history-panel h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+#historyList {
+  list-style: none;
+  padding-left: 0;
+}
+
+#historyList li {
+  margin-bottom: 10px;
+  background-color: #d2d0d0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  word-break: break-word;
+  border-left: 3px solid #14972e;
+}
