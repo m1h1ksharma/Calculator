@@ -9,7 +9,6 @@ document.addEventListener("mousemove", function (event) {
   document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 });
 
-
 let inputBox = document.querySelector(".input");
 let string = "";
 let memory = 0;
@@ -24,9 +23,17 @@ Array.from(buttons).forEach((button) => {
       try {
         let result = eval(string);
         inputBox.value = result;
+
+        let expression = `${string} = ${result}`;
+
+
         let li = document.createElement("li");
-        li.textContent = `${string} = ${result}`;
+        li.textContent = expression;
         historyList.prepend(li);
+
+        
+        saveToLocalStorage(expression);
+
         string = result.toString();
       } catch (err) {
         inputBox.value = "Error";
@@ -52,12 +59,12 @@ Array.from(buttons).forEach((button) => {
       }
       inputBox.value = string;
     }
+
     else {
       string += val;
       inputBox.value = string;
     }
 
-    
     if (string.length > 0) {
       inputBox.classList.add("active-input");
     } else {
@@ -65,3 +72,30 @@ Array.from(buttons).forEach((button) => {
     }
   });
 });
+
+
+function saveToLocalStorage(entry) {
+  let history = JSON.parse(localStorage.getItem("calcHistory")) || [];
+  history.unshift(entry); 
+  localStorage.setItem("calcHistory", JSON.stringify(history));
+}
+
+
+function loadHistoryFromLocalStorage() {
+  let history = JSON.parse(localStorage.getItem("calcHistory")) || [];
+  historyList.innerHTML = ""; 
+  history.forEach((entry) => {
+    let li = document.createElement("li");
+    li.textContent = entry;
+    historyList.appendChild(li);
+  });
+}
+
+
+function clearHistory() {
+  localStorage.removeItem("calcHistory");
+  historyList.innerHTML = "";
+}
+
+window.onload = loadHistoryFromLocalStorage;
+
