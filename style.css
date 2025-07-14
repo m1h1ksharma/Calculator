@@ -148,3 +148,81 @@ h1{
   background: linear-gradient(145deg, #f55c5c, #ec7272);
   transform: scale(1.03);
 }
+.mode-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.mode-toggle button {
+  padding: 10px 20px;
+  font-family: 'Orbitron', sans-serif;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #7fd0e9, #8b99f6);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.mode-toggle button:hover {
+  background: linear-gradient(145deg, #60c0d9, #6d84f5);
+  transform: scale(1.05);
+}
+
+
+#bmiCalculator {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 
+    inset 0 0 16px #2b2d2c,       
+    0 0 8px rgba(29, 30, 30, 0.4);
+  width: 100%;
+  max-width: 350px;
+  margin-top: 20px;
+}
+
+.bmi-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bmi-inputs input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1.8px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.bmi-inputs button {
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  background: linear-gradient(145deg, #80e9d6, #9face6);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.bmi-inputs button:hover {
+  background: linear-gradient(145deg, #6fc8c3, #8ca4e4);
+  transform: scale(1.05);
+}
+
+#bmiResult {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
